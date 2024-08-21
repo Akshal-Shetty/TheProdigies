@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Prodigies</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+ <!-- Owl Carousel CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+   
+    <style>
+        .navbar-brand {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        /* Ensure right-side buttons stay on the right */
+        .navbar-right-buttons {
+            margin-left: auto;
+        }
+
+        .navbar {
+            background-color: transparent;
+            position: relative; /* Keep it in the document flow */
+            z-index: 1; /* Ensure it appears on top of the hero section */
+        }
+
+
+        /* Hero section with carousel */
+        .hero-carousel {
+            height: 80vh;
+        }
+
+        .carousel-item {
+            height: 80vh;
+            position: relative;
+        }
+
+        .carousel-item img,
+        .carousel-item video {
+            object-fit: cover;
+            height: 80vh;
+            width: 100%;
+            border-bottom-left-radius: 30%;
+        }
+
+        /* Content inside the hero section */
+        .hero-content {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgb(49, 49, 49);
+            z-index: 2;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            width: 40%;
+        }
+
+        /* Carousel indicators at the bottom */
+        .carousel-indicators {
+            position: absolute;
+            bottom: 20px;
+        }
+
+        .empowering{
+            border-top-left-radius: 10%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: white;
+            color: skyblue;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- Left Side Buttons -->
+            <div class="d-flex align-items-center">
+                <!-- Offcanvas Toggle Button -->
+                <button class="btn btn-outline-primary me-2 bg-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <i class="bi bi-list"></i>
+                </button>
+                <!-- Message Button -->
+                <button class="btn btn-outline-primary bg-light d-md-block d-none">
+                    <i class="bi bi-envelope"></i>
+                </button>
+            </div>
+
+            <!-- Brand/Logo in the Center -->
+            <a class="navbar-brand" href="#">
+                <img src="./img/logo.png" alt="" width="150">
+            </a>
+
+            <!-- Right Side Buttons -->
+            <div class="d-flex align-items-center navbar-right-buttons">
+                <!-- Search Button -->
+                <button class="btn btn-outline-primary me-2 bg-light  d-md-block d-none">
+                    <i class="bi bi-search"></i>
+                </button>
+                <!-- Share Button -->
+                <button class="btn btn-outline-primary bg-light">
+                    <i class="bi bi-share"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Offcanvas Sidebar -->
+    <div class="offcanvas offcanvas-start w-100" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="row">
+            <div class="col-lg-5 bg-dark" style="height: 100vh;">
+                <div class="offcanvas-header ms-auto">
+                    <button type="button" class="btn-close me-2 text-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <h5 class="offcanvas-title text-light" id="offcanvasNavbarLabel">Close</h5>   
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <ul>
+                            <li><span style="color: red;" class="" >+</span><a href="" class="text-decoration-none text-light">Wedding</a></li>
+                            <li><span style="color: red;" class="">+</span><a href="" class="text-decoration-none text-light">Corporate Event</a></li>
+                            <li><span style="color: red;" class="">+</span><a href="" class="text-decoration-none text-light">Activites</a></li>
+                            <li><span style="color: red;" class="">+</span><a href="" class="text-decoration-none text-light">Acommodation</a></li>
+                            <li><span style="color: red;" class="">+</span><a href="" class="text-decoration-none text-light">Contact Us</a></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-7 flowers">
+                <div class="container">
+                    <h4>Ashirwad</h4>
+
+                    <div class="row  py-lg-5">
+                        <div class="col-lg-4">
+                            <p>Home</p>
+                            <p>About</p>
+                            <p>Contact US</p>
+                            <p>Comapny</p>
+                            <p>People</p>
+                            <p>Review</p>
+                        </div>
+
+                        <div class="col-lg-8">
+                            <p class="my-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis atque blanditiis corporis maiores tenetur odio, amet iste doloremque deserunt quae?</p>
+                            
+                            <p class="mb-0">+91 9939393939</p>
+                            <p class="mb-2">info@gmail.com</p>
+                            <p><i class="bi bi-facebook me-2"></i> <i class="bi bi-instagram"></i></p>
+                    
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-lg-6"></div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="heroCarousel" class="carousel slide hero-carousel" style="margin-top: -80px;" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- First Slide with Image -->
+            <div class="carousel-item active">
+                <img src="./img/banner-img (1).jpg" class="d-block w-100" alt="Hero Image">
+                <div class="hero-content d-md-block d-none">
+                    <p class="mx-2">ANNOUNMENTS</p>
+                    <!-- <i class="bi bi-megaphone-fill" class="mx-2"></i> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512; height: 40px; fill: orange;" xml:space="preserve">
+                        <g>
+                            <g>
+                                <path d="M502.001,246.001h-28.038c-5.522,0-9.999,4.477-9.999,9.999c0,5.523,4.478,9.999,9.999,9.999h28.038    c5.522,0,9.999-4.477,9.999-9.999C512,250.478,507.523,246.001,502.001,246.001z"></path>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <path d="M500.981,192.611c-2.762-4.783-8.875-6.421-13.659-3.66l-18.359,10.599c-4.783,2.761-6.422,8.876-3.66,13.659    c1.852,3.209,5.213,5.002,8.669,5.002c1.696,0,3.416-0.432,4.99-1.341l18.359-10.6    C502.104,203.509,503.743,197.394,500.981,192.611z"></path>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <path d="M497.321,305.73l-18.359-10.6c-4.784-2.762-10.897-1.123-13.659,3.66c-2.762,4.783-1.123,10.898,3.66,13.659l18.359,10.6    c1.575,0.909,3.294,1.341,4.99,1.341c3.456,0,6.816-1.793,8.669-5.001C503.743,314.606,502.105,308.491,497.321,305.73z"></path>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <path d="M424.327,118.013c-9.869-43.064-23.233-63.997-40.857-63.997c-3.391,0-6.621,0.783-9.702,2.341L6.128,210.772    C2.415,212.33,0,215.963,0,219.99v71.994c0,4.026,2.415,7.659,6.127,9.219l53.931,22.656c0.032,0.014,0.065,0.027,0.097,0.041    l25.839,10.853v62.735c0,15.714,12.784,28.498,28.498,28.498h90.993c15.714,0,28.498-12.784,28.498-28.498v-0.567l139.8,58.728    c3.077,1.553,6.303,2.334,9.688,2.334c17.624,0,30.988-20.933,40.857-63.997c8.473-36.972,13.139-85.976,13.139-137.987    C437.466,203.989,432.8,154.985,424.327,118.013z M213.983,397.489c0,4.687-3.813,8.499-8.499,8.499h-90.993    c-4.687,0-8.499-3.813-8.499-8.499v-54.334l107.992,45.366V397.489z M73.994,308.022v-52.181c0-5.523-4.478-9.999-9.999-9.999    c-5.522,0-9.999,4.477-9.999,9.999v43.78l-33.997-14.282v-58.703L351.619,87.35c-3.28,8.548-6.276,18.756-9.005,30.663    c-0.31,1.35-0.612,2.722-0.912,4.104L228.325,164.79c-5.169,1.945-7.781,7.712-5.837,12.88c1.509,4.009,5.316,6.479,9.36,6.479    c1.17,0,2.36-0.208,3.521-0.644l102.052-38.411c-5.165,32.412-7.946,70.76-7.946,110.905c0,52.011,4.666,101.015,13.139,137.987    c2.729,11.906,5.727,22.112,9.005,30.661L73.994,308.022z M350.286,219.172c17.68,3.011,31.185,18.431,31.185,36.955    c0,18.521-13.5,33.937-31.174,36.953c-0.545-12.075-0.824-24.48-0.824-37.08C349.473,243.488,349.749,231.168,350.286,219.172z     M404.833,389.521c-9.13,39.841-19.328,48.465-21.363,48.465c-0.083,0-0.183-0.02-0.292-0.05c-0.162-0.079-0.32-0.164-0.488-0.235    l-0.238-0.1c-3.356-2.023-12.266-12.827-20.345-48.081c-4.974-21.704-8.58-47.838-10.638-76.402c28.173-3.687,50-27.83,50-56.991    c0-29.168-21.837-53.315-50.018-56.994c2.054-28.663,5.668-54.886,10.656-76.654c8.074-35.233,16.98-46.046,20.34-48.077    l0.883-0.371c0.049-0.007,0.099-0.017,0.141-0.017c2.035,0,12.233,8.624,21.363,48.465c8.146,35.55,12.634,82.969,12.634,133.521    C417.468,306.552,412.981,353.97,404.833,389.521z"></path>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <path d="M199.505,186.34c-1.938-5.171-7.697-7.793-12.871-5.858l-0.229,0.086c-5.172,1.937-7.794,7.699-5.858,12.871    c1.504,4.016,5.316,6.495,9.366,6.495c1.165,0,2.35-0.206,3.505-0.638l0.229-0.086    C198.819,197.274,201.442,191.511,199.505,186.34z"></path>
+                            </g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                    </svg>
+                    <p class="mx-2">Admissions open for <br> acedmeic Year 2021</p>
+                </div>
+            </div>
+            <!-- Second Slide with Video -->
+            <div class="carousel-item">
+                <video class="d-block w-100" autoplay muted loop>
+                    <source src="./bridge-64382.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="hero-content d-md-block d-none">
+                    <p class="mx-2">ANNOUNMENTS</p>
+                    <!-- <i class="bi bi-megaphone-fill" class="mx-2"></i> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512; height: 40px; fill: orange;" xml:space="preserve">
+                        <g>
+                            <g>
+                                <path d="M502.001,246.001h-28.038c-5.522,0-9.999,4.477-9.999,9.999c0,5.523,4.478,9.999,9.999,9.999h28.038    c5.522,0,9.999-4.477,9.999-9.999C512,250.478,507.523,246.001,502.001,246.001z"></path>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <path d="M500.981,192.611c-2.762-4.783-8.875-6.421-13.659-3.66l-18.359,10.599c-4.783,2.761-6.422,8.876-3.66,13.659    c1.852,3.209,5.213,5.002,8.669,5.002c1.696,0,3.416-0.432,4.99-1.341l18.359-10.6    C502.104,203.509,503.743,197.394,500.981,192.611z"></path>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <path d="M497.321,305.73l-18.359-10.6c-4.784-2.762-10.897-1.123-13.659,3.66c-2.762,4.783-1.123,10.898,3.66,13.659l18.359,10.6    c1.575,0.909,3.294,1.341,4.99,1.341c3.456,0,6.816-1.793,8.669-5.001C503.743,314.606,502.105,308.491,497.321,305.73z"></path>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <path d="M424.327,118.013c-9.869-43.064-23.233-63.997-40.857-63.997c-3.391,0-6.621,0.783-9.702,2.341L6.128,210.772    C2.415,212.33,0,215.963,0,219.99v71.994c0,4.026,2.415,7.659,6.127,9.219l53.931,22.656c0.032,0.014,0.065,0.027,0.097,0.041    l25.839,10.853v62.735c0,15.714,12.784,28.498,28.498,28.498h90.993c15.714,0,28.498-12.784,28.498-28.498v-0.567l139.8,58.728    c3.077,1.553,6.303,2.334,9.688,2.334c17.624,0,30.988-20.933,40.857-63.997c8.473-36.972,13.139-85.976,13.139-137.987    C437.466,203.989,432.8,154.985,424.327,118.013z M213.983,397.489c0,4.687-3.813,8.499-8.499,8.499h-90.993    c-4.687,0-8.499-3.813-8.499-8.499v-54.334l107.992,45.366V397.489z M73.994,308.022v-52.181c0-5.523-4.478-9.999-9.999-9.999    c-5.522,0-9.999,4.477-9.999,9.999v43.78l-33.997-14.282v-58.703L351.619,87.35c-3.28,8.548-6.276,18.756-9.005,30.663    c-0.31,1.35-0.612,2.722-0.912,4.104L228.325,164.79c-5.169,1.945-7.781,7.712-5.837,12.88c1.509,4.009,5.316,6.479,9.36,6.479    c1.17,0,2.36-0.208,3.521-0.644l102.052-38.411c-5.165,32.412-7.946,70.76-7.946,110.905c0,52.011,4.666,101.015,13.139,137.987    c2.729,11.906,5.727,22.112,9.005,30.661L73.994,308.022z M350.286,219.172c17.68,3.011,31.185,18.431,31.185,36.955    c0,18.521-13.5,33.937-31.174,36.953c-0.545-12.075-0.824-24.48-0.824-37.08C349.473,243.488,349.749,231.168,350.286,219.172z     M404.833,389.521c-9.13,39.841-19.328,48.465-21.363,48.465c-0.083,0-0.183-0.02-0.292-0.05c-0.162-0.079-0.32-0.164-0.488-0.235    l-0.238-0.1c-3.356-2.023-12.266-12.827-20.345-48.081c-4.974-21.704-8.58-47.838-10.638-76.402c28.173-3.687,50-27.83,50-56.991    c0-29.168-21.837-53.315-50.018-56.994c2.054-28.663,5.668-54.886,10.656-76.654c8.074-35.233,16.98-46.046,20.34-48.077    l0.883-0.371c0.049-0.007,0.099-0.017,0.141-0.017c2.035,0,12.233,8.624,21.363,48.465c8.146,35.55,12.634,82.969,12.634,133.521    C417.468,306.552,412.981,353.97,404.833,389.521z"></path>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <path d="M199.505,186.34c-1.938-5.171-7.697-7.793-12.871-5.858l-0.229,0.086c-5.172,1.937-7.794,7.699-5.858,12.871    c1.504,4.016,5.316,6.495,9.366,6.495c1.165,0,2.35-0.206,3.505-0.638l0.229-0.086    C198.819,197.274,201.442,191.511,199.505,186.34z"></path>
+                            </g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                    </svg>
+                    <p class="mx-2">Admissions open for <br> acedmeic Year 2021</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="empowering p-2 d-md-block d-none">
+            <h4>
+                Lorem ipsum, dolor sit amet <br>
+                consectetur adipisicing elit. <br>
+                Voluptates, doloribus!
+            </h4>
+        </div>      
+    </div>
+
+    <section class="insights mt-4">
+        <div class="container">
+            <h3 class="text-center">INSIGHTS</h3>
+            <p class="text-center fs-1">SHM STORE <span class="fw-bold">MARKET PLACEINSIGHTS</span></p>
+            <p class="text-center text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, amet? <br> Ipsa impedit soluta incidunt atque nisi consequuntur nulla at reiciendis!</p>
+        </div>
+
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <div class="card">
+                    <img src="./img/Insights.jpg" alt="Card 1">
+                    <div class="d-md-flex justify-content-evenly align-items-center orangewbg">
+                        <p class="mb-0">1 of 7</p>
+                        <p  class="mb-0">We track the best <br> Lorem, ipsum dolor.</p>
+                        <button class="button-bg-light border-0 text-warning rounded-4 py-2"> Visit The Page</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <img src="./img/Insights.jpg" alt="Card 1">
+                    <div class="d-md-flex justify-content-evenly align-items-center orangewbg">
+                        <p class="mb-0">2 of 7</p>
+                        <p  class="mb-0">We track the best <br> Lorem, ipsum dolor.</p>
+                        <button class="button-bg-light border-0 text-warning rounded-4 py-2"> Visit The Page</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <img src="./img/Insights.jpg" alt="Card 1">
+                    <div class="d-md-flex justify-content-evenly align-items-center orangewbg">
+                        <p class="mb-0">3 of 7</p>
+                        <p  class="mb-0">We track the best <br> Lorem, ipsum dolor.</p>
+                        <button class="button-bg-light border-0 text-warning rounded-4 py-2"> Visit The Page</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+          <!-- Swiper JS -->
+    </section>
+
+   
+    <section class="networks mt-5">
+        <div class="container">
+            <h3 class="text-center">NETWORK</h3>
+            <p class="text-center fs-1">SHM STORE <span class="fw-bold">CAPABILITY</span></p>
+            <p class="text-center text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, amet? <br> Ipsa impedit soluta incidunt atque nisi consequuntur nulla at reiciendis!</p>
+        </div>
+    </section>
+
+    <section class="ship">
+        <div class="d-flex justify-content-center p-3">
+            <div class="map-container">
+                <img src="./img/F97E3234.png" alt="India Map" class="india-map"> <!-- Replace with your image source -->
+                
+                <!-- First Dot and Info Box -->
+                <div class="dot dot1"></div>
+                <div class="info-box" style="top: 42%; left: 52%;">
+                    <p class="mb-0">SHM Shipcare</p>
+                    <p class="mb-0">Lorem, ipsum dolor.</p>
+                    <p class="mb-0">Lorem, ipsum dolor.</p>
+                    <span style="border-top: 1px solid orange;">View MAP</span>
+                </div>
+            
+                <!-- Second Dot and Info Box -->
+                <div class="dot dot2"></div>
+                <div class="info-box" style="top: 62%; left: 57%;">
+                    <p class="mb-0">SHM Shipcare</p>
+                    <p class="mb-0">Lorem, ipsum dolor.</p>
+                    <p class="mb-0">Lorem, ipsum dolor.</p>
+                    <span style="border-top: 1px solid orange;">View MAP</span>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+
+    <section class="orangewbg">
+        <div class="container text-center py-3">
+            <h3>
+                Get Your Products Delivered
+            </h3>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit?</h3>
+            <button type="button" class="btn bg-white text-warning rounded-5 py-3">Contact US <i class="ms-1 bi bi-whatsapp"></i></button>
+        </div>
+    </section>
+
+    <footer class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 text-center">
+                    <div class="SHM-store">
+                        SHM Store
+                        <hr>
+                        <p>Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. <br> Quasi, qui?</p>
+                        <div class="d-flex">
+                            <div class="col">
+                                <img src="./img/twitter.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col">
+                                <img src="./img/youtube.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col">
+                                <img src="./img/linkedin.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col">
+                                <img src="./img/facebook.png" alt="" class="img-fluid">
+                            </div>            
+                            
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-3 col-6">
+                    <h4 class="text-light">Useful Links</h4>
+                    <hr>
+                    <ul class="ps-0">
+                        <li><a href="">BLog</a></li>
+                        <li><a href="">SHM</a></li>
+                        <li><a href="">Register</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <h4 class="text-light">Company</h4>
+                    <hr>
+                    <ul class="ps-0">
+                        <li><a href="">SHM</a></li>
+                        <li><a href="">SHM</a></li>
+                        <li><a href="">SHM</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 ccompany">
+                    <h4 class="text-light">Company</h4>
+                    <p class="text-light"><i class="bi bi-telephone-fill me-2"></i> +91 22-2222-2222</p>
+                    <p class="text-light"><i class="bi bi-envelope-fill  me-2"></i> info@gmail.com</p>
+                    <p class="text-light"><i class="bi bi-geo-alt-fill  me-2"></i> Lorem ipsum dolor .</p>
+                </div>
+            </div>
+            <div class="row haveQ text-light justify-content-between">
+                <div class="col-lg-4">
+                    <p class="fw-bold fs-3 mb-0">Have Questions?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+               <div class="col-lg-4">
+                    <p class="fw-bold fs-3">Subscribe to news letter</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control bg-primary border-0" placeholder="Enter email" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn" type="button" id="button-addon2">Subscribe</button>
+                    </div>
+               </div>
+            </div>
+
+            <div class="d-lg-flex text-center justify-content-evenly">
+                <div class="p-2 text-light">Copyright © SHM Shipcare. All Rights Reserved. Developed by Akshal Shetty</div>
+                <div class="p-2"><a href="">Terms And Conditions</a></div>
+                <div class="p-2"><a href="">Privacy Policy</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                dots: true,
+                autoplay: true, // Enable autoplay
+                autoplayTimeout: 3000,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 1
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1.5,
+            centeredSlides: true,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 3000, // Adjust delay as needed
+                disableOnInteraction: false, // Allows autoplay to continue after user interactions
+            },
+            breakpoints: {
+            768: {
+                slidesPerView: 1.5,
+                spaceBetween: 20,
+            },
+            480: {
+                slidesPerView: 1,
+                spaceBetween: 15,
+            },
+      },
+    });
+  </script>
+
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

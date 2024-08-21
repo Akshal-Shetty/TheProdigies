@@ -1,0 +1,220 @@
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+}
+.navbar ul li{
+   list-style: none;
+}
+.navbar ul li .span-red{
+    color: red;
+    margin-right: 10px;
+}
+.navbar .offcanvas-body{
+    color: white;
+}
+.offcanvas ul li{
+    margin-bottom: 20px;
+}
+
+.owl-carousel .card {
+    background-color: #f8f9fa;
+    /* padding: 20px; */
+    border-radius: 13px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.owl-carousel .item {
+    margin: 15px;
+    border-radius: 13px;
+}
+
+/* Ensure the carousel is fully responsive */
+.owl-carousel .owl-item img {
+    display: block;
+    width: 80%;
+    height: auto;
+    border-radius: 5px;
+}
+.orangewbg{
+    background: url(./img/orangewave.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 30px 0;
+    font-size: 20px;
+}
+
+.offcanvas span{
+   margin-right: 30px;
+}
+.flowers{
+    position: relative;
+    background: url(./img/mountain.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px 0 0 20px;
+    color: white;
+    font-weight: 600;
+}
+.flowers::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity (0.5) as needed */
+    z-index: 1;
+}
+
+/* Content on top of the background */
+.dark-background > * {
+    position: relative;
+    z-index: 2;
+}
+.map-container {
+    position: relative;
+    width: 600px; /* Adjust width as needed */
+    margin: 0 auto;
+}
+
+.india-map {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.dot {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: blue;
+    border: 5px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Position the first dot */
+.dot1 {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Position the second dot */
+.dot2 {
+    top: 65%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+}
+
+/* Info box styling */
+.info-box {
+    position: absolute;
+    width: 250px;
+    padding: 10px;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    display: none;
+}
+
+/* Show info box on hover */
+.dot:hover + .info-box,
+.info-box:hover {
+    display: block;
+}
+
+.hero-content p{
+    margin-bottom: 0;
+}
+
+.insights h3{
+    color: orange;
+}
+
+.networks h3,.ship span{
+    color: orange;
+}
+
+.ship span{
+    position: relative;
+}
+.ship span ::before{
+    position: absolute;
+    /* content: ''; */
+    top: 0;
+    border: 1px solid orange;
+    width: 20px;
+}
+.ship{
+    background: url(./img/shipbg.jfif) no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+}
+.ship .map{
+    position: relative;
+}
+.ship .info{
+    padding: 20px;
+    position: absolute;
+    background: white;
+    color: black;
+    border-radius: 5px;
+}
+.getproducts{
+    background: darkorange;
+    color: white;
+}
+.getproducts button{
+    color: darkorange;
+}
+footer{
+    background: url(./img/bluewave.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+footer .SHM-store{
+    border-radius: 5px 30% 5px 5px;
+    padding: 20px;
+    background: white;
+    color: black;
+    margin-top: -50px;
+}
+footer .SHM-store img{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 1px solid orange;
+    margin: auto;
+}
+footer ul{
+    list-style: none;
+    color: white;
+}
+footer ul li{
+   margin-bottom: 12px;
+}
+footer ul li a{
+    text-decoration: none;
+    color: white;
+}
+footer .input-group button{
+    background-color: #ff7b00;
+    color: white;
+    border: none;
+}
+.ccompany p{
+    font-size: 20px;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+/* .insights .swiper {
+    width: 600px;
+    height: 300px;
+} */
